@@ -1,0 +1,55 @@
+{
+  "11q14.1-q25": {
+    "cytoband": "11q14.1-q25",
+    "start_mb": 81.5,
+    "end_mb": 135,
+    "size_mb": 53.5,
+    "omim_genes": {
+      "BDNF": {"omim_id": "113505", "description": "脑源性神经营养因子"},
+      "CBL": {"omim_id": "165360", "description": "E3 ubiquitin protein ligase"},
+      "ETS1": {"omim_id": "164720", "description": "ETS transcription factor"},
+      "KCNJ5": {"omim_id": "600734", "description": "钾离子通道"},
+      "MMP": {"omim_id": "120355", "description": "基质金属蛋白酶"}
+    },
+    "clingen_genes": {
+      "ATM": {
+        "omim_id": "607585", 
+        "description": "共济失调-毛细血管扩张症",
+        "haploinsufficiency": "HI",
+        "note": "单倍体剂量不足与神经发育表型相关"
+      }
+    },
+    "decipher_cases": [
+      {
+        "patient_id": "284044",
+        "inheritance": "新发缺失",
+        "phenotype": "全面发育迟缓、中度智力障碍、共济失调、特殊面容及免疫缺陷"
+      },
+      {
+        "patient_id": "251044",
+        "inheritance": "新发缺失",
+        "phenotype": "肌张力低下、喂养困难、生长迟缓及轻度畸形特征"
+      }
+    ],
+    "pathogenicity": "Pathogenic"
+  },
+  "11q22.3": {
+    "cytoband": "11q22.3",
+    "key_gene": "ATM",
+    "omim_id": "607585",
+    "clingen_score": "HI",
+    "disease": "共济失调-毛细血管扩张症",
+    "phenotype": "神经发育迟缓、智力障碍、运动失调"
+  },
+  "17p13.3": {
+    "cytoband": "17p13.3",
+    "key_genes": ["YWHAE", "CRK"],
+    "associated_conditions": "Miller-Dieker综合征相关区域"
+  },
+  "22q11.2": {
+    "cytoband": "22q11.2",
+    "key_genes": ["TBX1", "COMT", "PRODH", "DGCR8"],
+    "clingen_score": "Triplosensitive",
+    "associated_conditions": "DiGeorge综合征/22q11.2缺失综合征"
+  }
+}

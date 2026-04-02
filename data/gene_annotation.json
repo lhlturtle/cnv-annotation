@@ -1,55 +1,646 @@
 {
+  "_meta": {
+    "version": "1.0",
+    "genome": "hg38",
+    "description": "临床相关基因注释数据库 - 包含OMIM、ClinGenhaploinsufficiency、DECIPHER病例"
+  },
   "11q14.1-q25": {
     "cytoband": "11q14.1-q25",
-    "start_mb": 81.5,
-    "end_mb": 135,
+    "chromosome": "chr11",
+    "start": 81500000,
+    "end": 135000000,
     "size_mb": 53.5,
     "omim_genes": {
-      "BDNF": {"omim_id": "113505", "description": "脑源性神经营养因子"},
-      "CBL": {"omim_id": "165360", "description": "E3 ubiquitin protein ligase"},
-      "ETS1": {"omim_id": "164720", "description": "ETS transcription factor"},
-      "KCNJ5": {"omim_id": "600734", "description": "钾离子通道"},
-      "MMP": {"omim_id": "120355", "description": "基质金属蛋白酶"}
+      "BDNF": {"omim_id": "113505", "gene_full_name": "Brain-Derived Neurotrophic Factor", "description": "脑源性神经营养因子", "inheritance": "AD"},
+      "CBL": {"omim_id": "165360", "gene_full_name": "CBL Proto-Oncogene", "description": "E3泛素蛋白连接酶", "inheritance": "AD"},
+      "ETS1": {"omim_id": "164720", "gene_full_name": "ETS Proto-Oncogene 1", "description": "ETS转录因子", "inheritance": "AD"},
+      "KCNJ5": {"omim_id": "600734", "gene_full_name": "Potassium Inwardly Rectifying Channel Subfamily J Member 5", "description": "钾离子通道", "inheritance": "AD"},
+      "MMP": {"omim_id": "120355", "gene_full_name": "Matrix Metallopeptidase", "description": "基质金属蛋白酶", "inheritance": ""},
+      "ATM": {"omim_id": "607585", "gene_full_name": "ATM Serine/Threonine Kinase", "description": "ATM激酶 - 共济失调毛细血管扩张症", "inheritance": "AR"},
+      "PON1": {"omim_id": "168820", "gene_full_name": "Paraoxonase 1", "description": "对氧磷酶1", "inheritance": ""},
+      "PON2": {"omim_id": "602447", "gene_full_name": "Paraoxonase 2", "description": "对氧磷酶2", "inheritance": ""},
+      "PON3": {"omim_id": "602448", "gene_full_name": "Paraoxonase 3", "description": "对氧磷酶3", "inheritance": ""},
+      "ARAP1": {"omim_id": "606653", "gene_full_name": "ArfGAP with RhoGAP Domain", "description": "ARF GTPase激活蛋白", "inheritance": ""},
+      "STARD10": {"omim_id": "612687", "gene_full_name": "StAR Related Lipid Transfer Domain Containing 10", "description": "脂质转运蛋白", "inheritance": ""}
     },
     "clingen_genes": {
       "ATM": {
-        "omim_id": "607585", 
-        "description": "共济失调-毛细血管扩张症",
-        "haploinsufficiency": "HI",
-        "note": "单倍体剂量不足与神经发育表型相关"
+        "omim_id": "607585",
+        "haploinsufficiency_score": "HI",
+        "triplosensitivity_score": "TS",
+        "description": "单倍体剂量不足与共济失调-毛细血管扩张症相关",
+        "disease": "共济失调-毛细血管扩张症",
+        "phenotype": "神经发育迟缓、智力障碍、运动失调、免疫缺陷"
       }
     },
     "decipher_cases": [
       {
         "patient_id": "284044",
         "inheritance": "新发缺失",
-        "phenotype": "全面发育迟缓、中度智力障碍、共济失调、特殊面容及免疫缺陷"
+        "phenotype": "全面发育迟缓、中度智力障碍、共济失调、特殊面容及免疫缺陷",
+        "pathogenicity": "Pathogenic"
       },
       {
         "patient_id": "251044",
         "inheritance": "新发缺失",
-        "phenotype": "肌张力低下、喂养困难、生长迟缓及轻度畸形特征"
+        "phenotype": "肌张力低下、喂养困难、生长迟缓及轻度畸形特征",
+        "pathogenicity": "Pathogenic"
       }
     ],
-    "pathogenicity": "Pathogenic"
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
   },
   "11q22.3": {
     "cytoband": "11q22.3",
-    "key_gene": "ATM",
-    "omim_id": "607585",
-    "clingen_score": "HI",
-    "disease": "共济失调-毛细血管扩张症",
-    "phenotype": "神经发育迟缓、智力障碍、运动失调"
+    "chromosome": "chr11",
+    "start": 109500000,
+    "end": 110500000,
+    "size_mb": 1.0,
+    "omim_genes": {
+      "ATM": {"omim_id": "607585", "gene_full_name": "ATM Serine/Threonine Kinase", "description": "ATM激酶", "inheritance": "AR"}
+    },
+    "clingen_genes": {
+      "ATM": {
+        "omim_id": "607585",
+        "haploinsufficiency_score": "HI",
+        "description": "明确的单倍体剂量敏感基因",
+        "disease": "共济失调-毛细血管扩张症",
+        "phenotype": "神经发育迟缓、智力障碍、运动失调"
+      }
+    },
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
   },
   "17p13.3": {
     "cytoband": "17p13.3",
-    "key_genes": ["YWHAE", "CRK"],
-    "associated_conditions": "Miller-Dieker综合征相关区域"
+    "chromosome": "chr17",
+    "start": 1,
+    "end": 2700000,
+    "size_mb": 2.7,
+    "omim_genes": {
+      "YWHAE": {"omim_id": "609008", "gene_full_name": "Tyrosine 3-Monooxygenase/Tryptophan 5-Monooxygenase Activation Protein Epsilon", "description": "14-3-3蛋白家族成员", "inheritance": "AD"},
+      "CRK": {"omim_id": "164762", "gene_full_name": "CRK Proto-Oncogene", "description": "CRK原癌基因", "inheritance": ""},
+      "SMG6": {"omim_id": "611453", "gene_full_name": "SMG6 Nonsense Mediated mRNA Decay Regulator", "description": "无义介导mRNA降解调节因子", "inheritance": ""},
+      "SHPK": {"omim_id": "605777", "gene_full_name": "Sedoheptulokinase", "description": "景天庚酮糖激酶", "inheritance": ""}
+    },
+    "clingen_genes": {
+      "YWHAE": {
+        "omim_id": "609008",
+        "haploinsufficiency_score": "HI",
+        "description": "Miller-Dieker综合征相关区域关键基因",
+        "disease": "Miller-Dieker综合征",
+        "phenotype": "无脑回畸形、严重智力障碍、癫痫"
+      }
+    },
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "17p13.2-p12": {
+    "cytoband": "17p13.2-p12",
+    "chromosome": "chr17",
+    "start": 2700000,
+    "end": 15400000,
+    "size_mb": 12.7,
+    "omim_genes": {
+      "PAFAH1B1": {"omim_id": "601545", "gene_full_name": "Platelet Activating Factor Acetylhydrolase 1b", "description": "Miller-Dieker综合征关键基因", "inheritance": "AD"},
+      "YWHAE": {"omim_id": "609008", "gene_full_name": "14-3-3蛋白 epsilon", "description": "神经发育相关", "inheritance": "AD"},
+      "CTDNEP1": {"omim_id": "610837", "gene_full_name": "CTD Nuclear Envelope Phosphatase 1", "description": "核膜磷酸酶", "inheritance": ""},
+      "SERPINF1": {"omim_id": "172860", "gene_full_name": "Serpin Family F Member 1", "description": "色素上皮衍生因子", "inheritance": "AR"}
+    },
+    "clingen_genes": {
+      "PAFAH1B1": {
+        "omim_id": "601545",
+        "haploinsufficiency_score": "HI",
+        "description": "LIS1基因 - Miller-Dieker综合征",
+        "disease": "Miller-Dieker综合征/无脑回畸形1型",
+        "phenotype": "严重智力障碍、无脑回畸形、癫痫"
+      }
+    },
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
   },
   "22q11.2": {
     "cytoband": "22q11.2",
-    "key_genes": ["TBX1", "COMT", "PRODH", "DGCR8"],
-    "clingen_score": "Triplosensitive",
-    "associated_conditions": "DiGeorge综合征/22q11.2缺失综合征"
+    "chromosome": "chr22",
+    "start": 17000000,
+    "end": 22000000,
+    "size_mb": 3.0,
+    "omim_genes": {
+      "TBX1": {"omim_id": "602054", "gene_full_name": "T-Box 1", "description": "T-box转录因子 - DiGeorge综合征关键基因", "inheritance": "AD"},
+      "COMT": {"omim_id": "116790", "gene_full_name": "Catechol-O-Methyltransferase", "description": "儿茶酚-O-甲基转移酶", "inheritance": ""},
+      "PRODH": {"omim_id": "606810", "gene_full_name": "Proline Dehydrogenase 1", "description": "脯氨酸脱氢酶", "inheritance": "AR"},
+      "DGCR8": {"omim_id": "609030", "gene_full_name": "DGCR8 MicroRNA Complex Component", "description": "微RNA加工蛋白", "inheritance": ""},
+      "HIRA": {"omim_id": "600935", "gene_full_name": "Histone Cell Cycle Regulator", "description": "组蛋白细胞周期调节因子", "inheritance": ""},
+      "RTN4R": {"omim_id": "605465", "gene_full_name": "Reticulon 4 Receptor", "description": "网蛋白受体", "inheritance": ""},
+      "TXNRD2": {"omim_id": "606448", "gene_full_name": "Thioredoxin Reductase 2", "description": "硫氧还蛋白还原酶", "inheritance": "AR"},
+      "COMT": {"omim_id": "116790", "gene_full_name": "儿茶酚-O-甲基转移酶", "description": "精神分裂症相关基因", "inheritance": ""},
+      "SEPT5": {"omim_id": "602688", "gene_full_name": "Septin 5", "description": "细胞分裂蛋白", "inheritance": ""},
+      "GNB1L": {"omim_id": "610778", "gene_full_name": "G Protein Subunit Beta 1 Like", "description": "G蛋白β亚基样蛋白", "inheritance": ""}
+    },
+    "clingen_genes": {
+      "TBX1": {
+        "omim_id": "602054",
+        "haploinsufficiency_score": "HI",
+        "description": "DiGeorge综合征/22q11.2缺失综合征关键基因",
+        "disease": "DiGeorge综合征/22q11.2缺失综合征",
+        "phenotype": "先天性心脏病、胸腺发育不良、腭裂、低钙血症、免疫缺陷"
+      },
+      "COMT": {
+        "omim_id": "116790",
+        "haploinsufficiency_score": "non-HI",
+        "triplosensitivity_score": "TS",
+        "description": "精神分裂症风险基因",
+        "disease": "22q11.2缺失综合征-精神分裂症相关"
+      }
+    },
+    "decipher_cases": [
+      {
+        "patient_id": "282040",
+        "inheritance": "继承性缺失",
+        "phenotype": "先天性心脏病、腭裂、免疫缺陷、发育迟缓",
+        "pathogenicity": "Pathogenic"
+      },
+      {
+        "patient_id": "249610",
+        "inheritance": "新发缺失",
+        "phenotype": "典型DiGeorge综合征表型",
+        "pathogenicity": "Pathogenic"
+      }
+    ],
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "4p16.3": {
+    "cytoband": "4p16.3",
+    "chromosome": "chr4",
+    "start": 1,
+    "end": 3000000,
+    "size_mb": 3.0,
+    "omim_genes": {
+      "WHSCR1": {"omim_id": "194190", "gene_full_name": "Wolf-Hirschhorn Syndrome Candidate 1", "description": "Wolf-Hirschhorn综合征关键区域基因", "inheritance": "AD"},
+      "WHSCR2": {"omim_id": "602783", "gene_full_name": "Wolf-Hirschhorn Syndrome Candidate 2", "description": "Wolf-Hirschhorn综合征关键区域基因", "inheritance": "AD"},
+      "LETM1": {"omim_id": "606917", "gene_full_name": "Leucine Zipper And EF-Hand Containing Transmembrane Protein 1", "description": "线粒体蛋白", "inheritance": ""},
+      "FGFR3": {"omim_id": "134934", "gene_full_name": "Fibroblast Growth Factor Receptor 3", "description": "成纤维细胞生长因子受体3", "inheritance": "AD"},
+      "CTBP1": {"omim_id": "602618", "gene_full_name": "C-Terminal Binding Protein 1", "description": "C端结合蛋白1", "inheritance": ""}
+    },
+    "clingen_genes": {
+      "WHSCR1": {
+        "omim_id": "194190",
+        "haploinsufficiency_score": "HI",
+        "description": "Wolf-Hirschhorn综合征关键基因",
+        "disease": "Wolf-Hirschhorn综合征",
+        "phenotype": "发育迟缓、智力障碍、特殊面容、癫痫"
+      }
+    },
+    "decipher_cases": [
+      {
+        "patient_id": "270240",
+        "inheritance": "新发缺失",
+        "phenotype": "典型Wolf-Hirschhorn综合征：特殊面容、发育迟缓、癫痫",
+        "pathogenicity": "Pathogenic"
+      }
+    ],
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "5p15.33": {
+    "cytoband": "5p15.33",
+    "chromosome": "chr5",
+    "start": 1,
+    "end": 2700000,
+    "size_mb": 2.7,
+    "omim_genes": {
+      "TERT": {"omim_id": "187270", "gene_full_name": "Telomerase Reverse Transcriptase", "description": "端粒酶逆转录酶", "inheritance": ""},
+      "SEMA5A": {"omim_id": "609297", "gene_full_name": "Semaphorin 5A", "description": "信号素5A", "inheritance": ""},
+      "ADAMTS16": {"omim_id": "620168", "gene_full_name": "ADAMTS Metallopeptidase 16", "description": "金属蛋白酶", "inheritance": ""},
+      "TRIP13": {"omim_id": "604507", "gene_full_name": "Thyroid Hormone Receptor Interactor 13", "description": "甲状腺激素受体相互作用蛋白", "inheritance": ""}
+    },
+    "clingen_genes": {
+      "TERT": {
+        "omim_id": "187270",
+        "haploinsufficiency_score": "non-HI",
+        "description": "端粒酶相关基因",
+        "disease": "先天性角化不良相关"
+      }
+    },
+    "pathogenicity": "Likely Pathogenic",
+    "acmg_classification": "LP"
+  },
+  "7q11.23": {
+    "cytoband": "7q11.23",
+    "chromosome": "chr7",
+    "start": 72000000,
+    "end": 77000000,
+    "size_mb": 1.4,
+    "omim_genes": {
+      "ELN": {"omim_id": "130160", "gene_full_name": "Elastin", "description": "弹性蛋白 - Williams综合征关键基因", "inheritance": "AD"},
+      "LIMK1": {"omim_id": "601329", "gene_full_name": "LIM Domain Kinase 1", "description": "LIM结构域激酶1", "inheritance": ""},
+      "RFC2": {"omim_id": "600404", "gene_full_name": "Replication Factor C Subunit 2", "description": "复制因子C亚基2", "inheritance": ""},
+      "CLDN3": {"omim_id": "602910", "gene_full_name": "Claudin 3", "description": "紧密连接蛋白3", "inheritance": ""},
+      "CLDN4": {"omim_id": "602909", "gene_full_name": "Claudin 4", "description": "紧密连接蛋白4", "inheritance": ""},
+      "BAZ1B": {"omim_id": "605683", "gene_full_name": "Bromodomain Adjacent To Zinc Finger Domain 1B", "description": "溴结构域蛋白", "inheritance": ""},
+      "STX1A": {"omim_id": 186590, "gene_full_name": "Syntaxin 1A", "description": "突触蛋白", "inheritance": ""},
+      "GTF2I": {"omim_id": 601680, "gene_full_name": "General Transcription Factor II I", "description": "通用转录因子II-I", "inheritance": "AD"}
+    },
+    "clingen_genes": {
+      "ELN": {
+        "omim_id": "130160",
+        "haploinsufficiency_score": "HI",
+        "description": "Williams综合征关键基因 - 弹性蛋白基因",
+        "disease": "Williams综合征",
+        "phenotype": "特殊面容、心血管异常、发育迟缓、高钙血症"
+      },
+      "GTF2I": {
+        "omim_id": "601680",
+        "haploinsufficiency_score": "HI",
+        "description": "Williams综合征相关基因",
+        "disease": "Williams综合征"
+      }
+    },
+    "decipher_cases": [
+      {
+        "patient_id": "276540",
+        "inheritance": "新发缺失",
+        "phenotype": "典型Williams综合征：心血管异常、特殊面容、发育迟缓",
+        "pathogenicity": "Pathogenic"
+      }
+    ],
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "13q14.1-q14.3": {
+    "cytoband": "13q14.1-q14.3",
+    "chromosome": "chr13",
+    "start": 45000000,
+    "end": 55000000,
+    "size_mb": 10.0,
+    "omim_genes": {
+      "RB1": {"omim_id": "614041", "gene_full_name": "Retinoblastoma 1", "description": "视网膜母细胞瘤基因 - 肿瘤抑制基因", "inheritance": "AD"},
+      "FOXO1": {"omim_id": "136347", "gene_full_name": "Forkhead Box O1", "description": "叉头盒转录因子O1", "inheritance": ""},
+      "MIPEP": {"omim_id": "602241", "gene_full_name": "Mitochondrial Intermediate Peptidase", "description": "线粒体中间肽酶", "inheritance": "AR"},
+      "RNaseH2A": {"omim_id": "606034", "gene_full_name": "Ribonuclease H2 Subunit A", "description": "核糖核酸酶H2亚基A", "inheritance": "AR"}
+    },
+    "clingen_genes": {
+      "RB1": {
+        "omim_id": "614041",
+        "haploinsufficiency_score": "HI",
+        "description": "明确的肿瘤抑制基因单倍体剂量不足",
+        "disease": "视网膜母细胞瘤",
+        "phenotype": "视网膜母细胞瘤、骨肉瘤风险增加"
+      }
+    },
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "15q11.2-q13": {
+    "cytoband": "15q11.2-q13",
+    "chromosome": "chr15",
+    "start": 23000000,
+    "end": 32000000,
+    "size_mb": 9.0,
+    "omim_genes": {
+      "UBE3A": {"omim_id": "601323", "gene_full_name": "Ubiquitin Protein Ligase E3A", "description": "泛素连接酶E3A - Prader-Willi/Angelman综合征关键基因", "inheritance": "AD/母源特异性"},
+      "SNORD116": {"omim_id": "611912", "gene_full_name": "Small Nucleolar RNA, C/D Box 116 Cluster", "description": "小核仁RNA - Prader-Willi综合征关键区域", "inheritance": ""},
+      "MAGEL2": {"omim_id": "605283", "gene_full_name": "MAGE Family Member L2", "description": "黑色素瘤抗原家族成员L2", "inheritance": "父源特异性"},
+      "MKRN3": {"omim_id": "603856", "gene_full_name": "Makorin Ring Finger Protein 3", "description": "makorin环指蛋白3", "inheritance": "父源特异性"},
+      "GABRB3": {"omim_id": "137192", "gene_full_name": "GABA A Receptor Subunit Beta 3", "description": "GABA受体β3亚基", "inheritance": ""},
+      "GABRA5": {"omim_id": "137140", "gene_full_name": "GABA A Receptor Subunit Alpha 5", "description": "GABA受体α5亚基", "inheritance": ""},
+      "GABRG3": {"omim_id": "138032", "gene_full_name": "GABA A Receptor Subunit Gamma 3", "description": "GABA受体γ3亚基", "inheritance": ""}
+    },
+    "clingen_genes": {
+      "UBE3A": {
+        "omim_id": "601323",
+        "haploinsufficiency_score": "HI",
+        "description": "Angelman综合征关键基因 - 母源缺失导致",
+        "disease": "Angelman综合征",
+        "phenotype": "严重智力障碍、无言语、癫痫、共济失调步态"
+      },
+      "SNORD116": {
+        "omim_id": "611912",
+        "haploinsufficiency_score": "HI",
+        "description": "Prader-Willi综合征关键区域",
+        "disease": "Prader-Willi综合征",
+        "phenotype": "肌张力低下、肥胖、智力障碍、性腺功能减退"
+      }
+    },
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "16p13.3": {
+    "cytoband": "16p13.3",
+    "chromosome": "chr16",
+    "start": 1,
+    "end": 6000000,
+    "size_mb": 6.0,
+    "omim_genes": {
+      "TSC2": {"omim_id": "191092", "gene_full_name": "Tuberous Sclerosis 2", "description": "结节性硬化症2型基因", "inheritance": "AD"},
+      "PKD1": {"omim_id": "601313", "gene_full_name": "Polycystin 1", "description": "多囊蛋白1", "inheritance": "AD"},
+      "PLINK": {"omim_id": "604571", "gene_full_name": "Ran GTPase Activating Protein", "description": "Ran GTP酶激活蛋白", "inheritance": ""},
+      "SOX8": {"omim_id": "605923", "gene_full_name": "SRY-Box 8", "description": "SOX转录因子8", "inheritance": ""},
+      "CREBBP": {"omim_id": "602140", "gene_full_name": "CREB Binding Protein", "description": "CREB结合蛋白 - Rubinstein-Taybi综合征", "inheritance": "AD"}
+    },
+    "clingen_genes": {
+      "TSC2": {
+        "omim_id": "191092",
+        "haploinsufficiency_score": "HI",
+        "description": "结节性硬化症2型基因",
+        "disease": "结节性硬化症",
+        "phenotype": "癫痫、皮肤色素减退、智能低下、肾错构瘤"
+      },
+      "CREBBP": {
+        "omim_id": "602140",
+        "haploinsufficiency_score": "HI",
+        "description": "Rubinstein-Taybi综合征相关基因",
+        "disease": "Rubinstein-Taybi综合征",
+        "phenotype": "特殊面容、拇指粗大、智力障碍"
+      }
+    },
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "17q21.31": {
+    "cytoband": "17q21.31",
+    "chromosome": "chr17",
+    "start": 43500000,
+    "end": 45000000,
+    "size_mb": 1.5,
+    "omim_genes": {
+      "MAPT": {"omim_id": "157140", "gene_full_name": "Microtubule Associated Protein Tau", "description": "tau蛋白 - 额颞叶痴呆相关基因", "inheritance": "AD"},
+      "KCNJ2": {"omim_id": "600681", "gene_full_name": "Potassium Inwardly Rectifying Channel Subfamily J Member 2", "description": "钾离子通道Kir2.1", "inheritance": "AD"},
+      "CRHR1": {"omim_id": "122561", "gene_full_name": "Corticotropin Releasing Hormone Receptor 1", "description": "促肾上腺皮质激素释放激素受体", "inheritance": ""},
+      "STH": {"omim_id": "607072", "gene_full_name": "Saitohin", "description": "tau蛋白相关蛋白", "inheritance": ""},
+      "ARL17A": {"omim_id": "607370", "gene_full_name": "ADP Ribosylation Factor Like GTPase 17A", "description": "ARF样GTP酶", "inheritance": ""}
+    },
+    "clingen_genes": {
+      "MAPT": {
+        "omim_id": "157140",
+        "haploinsufficiency_score": "non-HI",
+        "triplosensitivity_score": "TS",
+        "description": "17q21.31微缺失/重复综合征相关",
+        "disease": "17q21.31微缺失/重复综合征",
+        "phenotype": "发育迟缓、智力障碍、特殊面容、癫痫"
+      }
+    },
+    "decipher_cases": [
+      {
+        "patient_id": "271801",
+        "inheritance": "新发缺失",
+        "phenotype": "17q21.31微缺失综合征：发育迟缓、特殊面容、肌张力低下",
+        "pathogenicity": "Pathogenic"
+      }
+    ],
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "22q13.33": {
+    "cytoband": "22q13.33",
+    "chromosome": "chr22",
+    "start": 50000000,
+    "end": 51000000,
+    "size_mb": 1.0,
+    "omim_genes": {
+      "SHANK3": {"omim_id": "606230", "gene_full_name": "SH3 And Multiple Ankyrin Repeat Domains 3", "description": "Phelan-McDermid综合征关键基因", "inheritance": "AD"},
+      "ACR": {"omim_id": "102930", "gene_full_name": "Acrosin", "description": "顶体蛋白", "inheritance": ""},
+      "RABL2B": {"omim_id": "602941", "gene_full_name": "RAB, Member 2B", "description": "RAB GTP酶", "inheritance": ""},
+      "PARVB": {"omim_id": "603271", "gene_full_name": "Parvin Beta", "description": "副肌球蛋白", "inheritance": ""}
+    },
+    "clingen_genes": {
+      "SHANK3": {
+        "omim_id": "606230",
+        "haploinsufficiency_score": "HI",
+        "description": "Phelan-McDermid综合征关键基因",
+        "disease": "Phelan-McDermid综合征/22q13缺失综合征",
+        "phenotype": "严重智力障碍、无言语、孤独症谱系障碍、癫痫"
+      }
+    },
+    "decipher_cases": [
+      {
+        "patient_id": "262070",
+        "inheritance": "新发缺失",
+        "phenotype": "Phelan-McDermid综合征：严重发育迟缓、无言语、孤独症特征",
+        "pathogenicity": "Pathogenic"
+      }
+    ],
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "Xp22.33": {
+    "cytoband": "Xp22.33",
+    "chromosome": "chrX",
+    "start": 1,
+    "end": 2700000,
+    "size_mb": 2.7,
+    "omim_genes": {
+      "SHOX": {"omim_id": "312865", "gene_full_name": "Short Stature Homeobox", "description": "矮小同源盒基因 - Leri-Weill软骨生成障碍/TS关键基因", "inheritance": "PAR"},
+      "CRLF2": {"omim_id": "300088", "gene_full_name": "Cytokine Receptor Like Factor 2", "description": "细胞因子受体样因子2", "inheritance": ""},
+      "CSF2RA": {"omim_id": "425000", "gene_full_name": "Colony Stimulating Factor 2 Receptor Subunit Alpha", "description": "粒细胞-巨噬细胞集落刺激因子受体", "inheritance": ""},
+      "IL3RA": {"omim_id": "616551", "gene_full_name": "Interleukin 3 Receptor Subunit Alpha", "description": "白细胞介素3受体", "inheritance": ""},
+      "SLC25A6": {"omim_id": "300151", "gene_full_name": "Solute Carrier Family 25 Member 6", "description": "线粒体载体蛋白", "inheritance": ""},
+      "NLGN4X": {"omim_id": "300495", "gene_full_name": "Neuroligin 4 X-Linked", "description": "突触蛋白 - 孤独症相关", "inheritance": "XLR"}
+    },
+    "clingen_genes": {
+      "SHOX": {
+        "omim_id": "312865",
+        "haploinsufficiency_score": "HI",
+        "description": "矮小同源盒基因 - X/Y染色体假常染色体区",
+        "disease": "Leri-Weill软骨生成障碍/Turner综合征",
+        "phenotype": "矮小、腕部畸形、Madelung畸形"
+      }
+    },
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "7q36.3": {
+    "cytoband": "7q36.3",
+    "chromosome": "chr7",
+    "start": 157500000,
+    "end": 159000000,
+    "size_mb": 1.5,
+    "omim_genes": {
+      "CHCHD3": {"omim_id": "616487", "gene_full_name": "Coiled-Coil-Helix-Coiled-Coil-Helix Domain Containing 3", "description": "线粒体蛋白", "inheritance": ""},
+      "VIPAS39": {"omim_id": "613619", "gene_full_name": "VIPAR", "description": "内体翻转蛋白", "inheritance": "AR"},
+      "CUL1": {"omim_id": "603134", "gene_full_name": "Cullin 1", "description": "Cullin蛋白", "inheritance": ""},
+      "EN2": {"omim_id": "131310", "gene_full_name": "Engrailed Homeobox 2", "description": "同源盒基因EN2", "inheritance": ""},
+      "CHN1": {"omim_id": "118420", "gene_full_name": "Chimeric Dbl Family Rho GTPase Exchange Factor", "description": "Rho GTP酶交换因子", "inheritance": ""}
+    },
+    "clingen_genes": {},
+    "pathogenicity": "VUS",
+    "acmg_classification": "VUS"
+  },
+  "8p23.3-p23.1": {
+    "cytoband": "8p23.3-p23.1",
+    "chromosome": "chr8",
+    "start": 1,
+    "end": 12000000,
+    "size_mb": 12.0,
+    "omim_genes": {
+      "CSGALNACT1": {"omim_id": "608150", "gene_full_name": "Chondroitin Sulfate N-Acetylgalactosaminyltransferase 1", "description": "软骨素硫酸乙酰氨基半乳糖转移酶", "inheritance": ""},
+      "DUF258": {"omim_id": "606968", "gene_full_name": "Protein DUF258", "description": "功能未知蛋白", "inheritance": ""},
+      "SOX7": {"omim_id": "612202", "gene_full_name": "SRY-Box 7", "description": "SOX转录因子7", "inheritance": ""},
+      "FGF17": {"omim_id": "603725", "gene_full_name": "Fibroblast Growth Factor 17", "description": "成纤维细胞生长因子17", "inheritance": ""},
+      "FGF20": {"omim_id": "605558", "gene_full_name": "Fibroblast Growth Factor 20", "description": "成纤维细胞生长因子20", "inheritance": ""},
+      "KAT6A": {"omim_id": "601880", "gene_full_name": "Lysine Acetyltransferase 6A", "description": "赖氨酸乙酰转移酶6A", "inheritance": "AD"},
+      "MORC3": {"omim_id": "605327", "gene_full_name": "MORC Family CW-Type Zinc Finger 3", "description": "MORC家族锌指蛋白3", "inheritance": ""},
+      "TNKS": {"omim_id": "603303", "gene_full_name": "Tankyrase", "description": "端锚聚合酶", "inheritance": ""},
+      "CLN8": {"omim_id": "607837", "gene_full_name": "CLN8 Protein", "description": "神经元蜡样脂褐素沉积症蛋白", "inheritance": "AR"}
+    },
+    "clingen_genes": {
+      "KAT6A": {
+        "omim_id": "601880",
+        "haploinsufficiency_score": "HI",
+        "description": "KAT6A综合征相关基因",
+        "disease": "KAT6A综合征/常染色体显性智力障碍",
+        "phenotype": "智力障碍、发育迟缓、特殊面容、血液系统异常"
+      }
+    },
+    "decipher_cases": [
+      {
+        "patient_id": "278582",
+        "inheritance": "新发突变",
+        "phenotype": "KAT6A综合征：全面发育迟缓、特殊面容、指甲发育不良",
+        "pathogenicity": "Pathogenic"
+      }
+    ],
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "10q26.3": {
+    "cytoband": "10q26.3",
+    "chromosome": "chr10",
+    "start": 125000000,
+    "end": 135000000,
+    "size_mb": 10.0,
+    "omim_genes": {
+      "MGMT": {"omim_id": "154550", "gene_full_name": "O-6-Methylguanine-DNA Methyltransferase", "description": "O6-甲基鸟嘌呤-DNA甲基转移酶", "inheritance": ""},
+      "EGR3": {"omim_id": "602543", "gene_full_name": "Early Growth Response 3", "description": "早期生长反应蛋白3", "inheritance": ""},
+      "TCF7L2": {"omim_id": "602228", "gene_full_name": "Transcription Factor 7 Like 2", "description": "转录因子7样蛋白2", "inheritance": ""},
+      "CYP2C9": {"omim_id": "601130", "gene_full_name": "Cytochrome P450 Family 2 Subfamily C Member 9", "description": "细胞色素P450 2C9", "inheritance": ""},
+      "CYP2C19": {"omim_id": "124020", "gene_full_name": "Cytochrome P450 Family 2 Subfamily C Member 19", "description": "细胞色素P450 2C19", "inheritance": ""},
+      "CYP2C8": {"omim_id": "116820", "gene_full_name": "Cytochrome P450 Family 2 Subfamily C Member 8", "description": "细胞色素P450 2C8", "inheritance": ""},
+      "HTR7": {"omim_id": "182137", "gene_full_name": "5-Hydroxytryptamine Receptor 7", "description": "5-羟色胺受体7", "inheritance": ""},
+      "LHPP": {"omim_id": "610272", "gene_full_name": "Phospholysine Phosphohistidine Inorganic Pyrophosphate Phosphatase", "description": "磷酸赖氨酸磷酸组氨酸无机焦磷酸磷酸酶", "inheritance": ""},
+      "INF2": {"omim_id": "610982", "gene_full_name": "Inverted Formin 2", "description": "倒置形态蛋白2", "inheritance": "AD"}
+    },
+    "clingen_genes": {
+      "INF2": {
+        "omim_id": "610982",
+        "haploinsufficiency_score": "non-HI",
+        "description": "局灶节段性肾小球硬化症相关基因",
+        "disease": "局灶节段性肾小球硬化症",
+        "phenotype": "蛋白尿、肾病综合征"
+      }
+    },
+    "pathogenicity": "VUS",
+    "acmg_classification": "VUS"
+  },
+  "3q29": {
+    "cytoband": "3q29",
+    "chromosome": "chr3",
+    "start": 195000000,
+    "end": 200000000,
+    "size_mb": 5.0,
+    "omim_genes": {
+      "DLG1": {"omim_id": "601014", "gene_full_name": "Discs Large MAGUK Scaffold Protein 1", "description": "突触后密度蛋白", "inheritance": ""},
+      "P2RY15": {"omim_id": "606052", "gene_full_name": "Purinergic Receptor P2Y", "description": "嘌呤能受体", "inheritance": ""},
+      "TFRC": {"omim_id": "190010", "gene_full_name": "Transferrin Receptor", "description": "转铁蛋白受体", "inheritance": ""},
+      "MUC13": {"omim_id": "612866", "gene_full_name": "Mucin 13", "description": "粘蛋白13", "inheritance": ""},
+      "MUC4": {"omim_id": "158372", "gene_full_name": "Mucin 4", "description": "粘蛋白4", "inheritance": ""},
+      "BCHE": {"omim_id": "215200", "gene_full_name": "Butyrylcholinesterase", "description": "丁酰胆碱酯酶", "inheritance": ""},
+      "PAK2": {"omim_id": "605022", "gene_full_name": "P21 (RAC1) Activated Kinase 2", "description": "p21激活激酶2", "inheritance": ""},
+      "MECEL": {"omim_id": "617771", "gene_full_name": "MECEO1", "description": "3q29微缺失综合征候选基因", "inheritance": ""},
+      "DUSP27": {"omim_id": "610860", "gene_full_name": "Dual Specificity Phosphatase 27", "description": "双特异性磷酸酶27", "inheritance": ""},
+      "FBXO45": {"omim_id": 609118, "gene_full_name": "F-Box Protein 45", "description": "F-box蛋白45", "inheritance": ""}
+    },
+    "clingen_genes": {
+      "DLG1": {
+        "omim_id": "601014",
+        "haploinsufficiency_score": "HI",
+        "description": "3q29微缺失综合征相关基因",
+        "disease": "3q29微缺失综合征",
+        "phenotype": "智力障碍、孤独症谱系障碍、小头畸形、精神分裂症风险增加"
+      }
+    },
+    "decipher_cases": [
+      {
+        "patient_id": "276821",
+        "inheritance": "新发缺失",
+        "phenotype": "3q29微缺失综合征：智力障碍、孤独症谱系障碍、小头畸形",
+        "pathogenicity": "Pathogenic"
+      }
+    ],
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "18q21.33": {
+    "cytoband": "18q21.33",
+    "chromosome": "chr18",
+    "start": 56000000,
+    "end": 60000000,
+    "size_mb": 4.0,
+    "omim_genes": {
+      "TCF4": {"omim_id": "602272", "gene_full_name": "Transcription Factor 4", "description": "转录因子4 - Pitt-Hopkins综合征关键基因", "inheritance": "AD"},
+      "MRO": {"omim_id": "613276", "gene_full_name": "Maestro", "description": "细胞周期调控蛋白", "inheritance": ""},
+      "MBP": {"omim_id": "159430", "gene_full_name": "Myelin Basic Protein", "description": "髓鞘碱性蛋白", "inheritance": ""},
+      "NARS": {"omim_id": "612641", "gene_full_name": "Asparaginyl-tRNA Synthetase", "description": "天冬酰胺-tRNA合成酶", "inheritance": "AR"}
+    },
+    "clingen_genes": {
+      "TCF4": {
+        "omim_id": "602272",
+        "haploinsufficiency_score": "HI",
+        "description": "Pitt-Hopkins综合征关键基因",
+        "disease": "Pitt-Hopkins综合征",
+        "phenotype": "严重智力障碍、无言语、癫痫、特殊面容"
+      }
+    },
+    "decipher_cases": [
+      {
+        "patient_id": "277901",
+        "inheritance": "新发突变",
+        "phenotype": "Pitt-Hopkins综合征：智力障碍、特殊面容、癫痫",
+        "pathogenicity": "Pathogenic"
+      }
+    ],
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
+  },
+  "1q21.1": {
+    "cytoband": "1q21.1",
+    "chromosome": "chr1",
+    "start": 145000000,
+    "end": 148000000,
+    "size_mb": 3.0,
+    "omim_genes": {
+      "GJA5": {"omim_id": "121013", "gene_full_name": "Gap Junction Protein Alpha 5", "description": "间隙连接蛋白α5", "inheritance": ""},
+      "GJA8": {"omim_id": "600897", "gene_full_name": "Gap Junction Protein Alpha 8", "description": "间隙连接蛋白α8 - 先天性白内障", "inheritance": "AD"},
+      "GJB2": {"omim_id": "121011", "gene_full_name": "Gap Junction Protein Beta 2", "description": "间隙连接蛋白β2 - KID综合征", "inheritance": "AD"},
+      "GJB3": {"omim_id": "603324", "gene_full_name": "Gap Junction Protein Beta 3", "description": "间隙连接蛋白β3", "inheritance": "AD"},
+      "CX40": {"omim_id": "121014", "gene_full_name": "Gap Junction Protein Alpha 4", "description": "间隙连接蛋白α4", "inheritance": ""},
+      "LIX1": {"omim_id": "608577", "gene_full_name": "Limb Expression", "description": "肢体表达蛋白", "inheritance": ""},
+      "LPHN3": {"omim_id": "608530", "gene_full_name": "Adhesion G Protein-Coupled Receptor L3", "description": "粘附G蛋白偶联受体", "inheritance": ""},
+      "NBPF10": {"omim_id": "613706", "gene_full_name": "Neuroblastoma Breakpoint Family Member 10", "description": "神经母细胞瘤断点家族成员", "inheritance": ""},
+      "PRKAB2": {"omim_id": "602214", "gene_full_name": "Protein Kinase AMP-Activated Non-Catalytic Subunit Beta 2", "description": "AMP激活蛋白激酶β亚基", "inheritance": ""},
+      "FMO5": {"omim_id": "612631", "gene_full_name": "Flavin Containing Dimethylaniline Monooxygenase 5", "description": "黄素单氧酶5", "inheritance": ""},
+      "PDZK1": {"omim_id": "601686", "gene_full_name": "PDZ Domain Containing 1", "description": "PDZ结构域蛋白1", "inheritance": ""}
+    },
+    "clingen_genes": {
+      "GJA5": {
+        "omim_id": "121013",
+        "haploinsufficiency_score": "non-HI",
+        "triplosensitivity_score": "TS",
+        "description": "1q21.1微重复/缺失综合征相关",
+        "disease": "1q21.1微缺失/重复综合征",
+        "phenotype": "智力障碍、孤独症谱系障碍、先天性心脏病"
+      }
+    },
+    "decipher_cases": [
+      {
+        "patient_id": "276412",
+        "inheritance": "新发缺失",
+        "phenotype": "1q21.1微缺失综合征：发育迟缓、特殊面容、先天性心脏病",
+        "pathogenicity": "Pathogenic"
+      }
+    ],
+    "pathogenicity": "Pathogenic",
+    "acmg_classification": "P"
   }
 }

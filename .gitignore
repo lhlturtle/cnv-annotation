@@ -1,0 +1,8 @@
+__pycache__
+*.pyc
+.git
+*.db
+data/*.txt
+data/*.json
+!data/cytoband_hg38.txt
+!data/gene_annotation.json

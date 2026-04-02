@@ -1,6 +1,6 @@
 """
 CNV注释模块 - 染色体位置到cytoband和遗传咨询术语转换
-支持 hg38 基因组版本
+支持 hg19 基因组版本
 """
 import json
 import re
@@ -10,9 +10,13 @@ from pathlib import Path
 DATA_DIR = Path(__file__).parent.parent / "data"
 
 def load_cytoband_data():
-    """加载cytoband数据"""
-    cytoband_file = DATA_DIR / "cytoband_hg38.txt"
+    """加载cytoband数据 - hg19"""
+    # 优先使用hg19
+    cytoband_file = DATA_DIR / "cytoband_hg19.txt"
     data = {}
+    
+    if not cytoband_file.exists():
+        cytoband_file = DATA_DIR / "cytoband_hg38.txt"
     
     if not cytoband_file.exists():
         cytoband_file = DATA_DIR / "cytoband.txt"

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "version": "1.0",
-    "genome": "hg38",
+    "version": "1.1",
+    "genome": "hg19",
     "description": "临床相关基因注释数据库 - 包含OMIM、ClinGenhaploinsufficiency、DECIPHER病例"
   },
   "11q14.1-q25": {

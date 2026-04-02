@@ -4,5 +4,9 @@ __pycache__
 *.db
 data/*.txt
 data/*.json
-!data/cytoband_hg38.txt
-!data/gene_annotation.json
+data/*.gz
+data/ncbi_genes_hg19.json
+data/knownToLocusLink.txt
+data/kgXref.txt
+data/ncbigene.txt
+data/gene_info_hg19.txt
